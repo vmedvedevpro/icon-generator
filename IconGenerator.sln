@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluton Items", "Soluton It
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BB101600-6CA5-4501-9DBA-0387BDFE98EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,8 @@ Global
 		{19D7AE72-1950-4357-A954-5E173F219A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19D7AE72-1950-4357-A954-5E173F219A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19D7AE72-1950-4357-A954-5E173F219A57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19D7AE72-1950-4357-A954-5E173F219A57} = {BB101600-6CA5-4501-9DBA-0387BDFE98EC}
 	EndGlobalSection
 EndGlobal

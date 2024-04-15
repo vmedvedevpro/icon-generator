@@ -1,11 +1,14 @@
 using IconGenerator.Components;
 
+using MudBlazor.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddUserSecrets<Program>(true);
 
-// Add services to the container.
 builder.Services.AddRazorComponents()
        .AddInteractiveServerComponents();
+
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 

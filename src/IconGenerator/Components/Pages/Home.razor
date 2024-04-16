@@ -15,19 +15,19 @@
         <MudTextField @bind-Value="_iconText" Label="Your text logo" Variant="Variant.Outlined" FullWidth="true"/>
     </MudItem>
     <MudItem xs="6" Class="align-content-center">
-        <MudSlider @bind-Value="@_fontSizePercent" Min="10" Max="50"/>
+        <MudSlider @bind-Value="@_fontSizePercent" Min="10" Max="50" Size="Size.Medium" />
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient1"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient1"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient2"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true"  PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient2"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient3"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true"  PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient3"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient4"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true"  PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient4"/>
     </MudItem>
 </MudGrid>
 

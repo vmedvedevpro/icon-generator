@@ -1,3 +1,43 @@
 ﻿@page "/"
+@using MudBlazor.Utilities
 
-<PageTitle>Home</PageTitle>
+<MudItem Class="icon justify-center align-content-center" Style="">
+    <MudText Class="align-content-center"
+             Style="@($"height:40vh; width: 40vh; border-radius: 50%; margin: auto; color:white; overflow:hidden; font-size: {(40 * _fontSizePercent * 0.01):F0}vh;" +
+                      $"background: radial-gradient(circle at top left, {_gradient1.ToString(MudColorOutputFormats.RGBA)}, transparent)," +
+                                    $"radial-gradient(circle at top right, {_gradient2.ToString(MudColorOutputFormats.RGBA)}, transparent)," +
+                                    $"radial-gradient(circle at bottom left, {_gradient3.ToString(MudColorOutputFormats.RGBA)}, transparent)," +
+                                    $"radial-gradient(circle at bottom right, {_gradient4.ToString(MudColorOutputFormats.RGBA)}, transparent)")"
+             Align="Align.Center">@_iconText</MudText>
+</MudItem>
+<MudGrid Justify="Justify.Center" Style="padding: 5%">
+    <MudItem xs="6">
+        <MudTextField @bind-Value="_iconText" Label="Your text logo" Variant="Variant.Outlined" FullWidth="true"/>
+    </MudItem>
+    <MudItem xs="6" Class="align-content-center">
+        <MudSlider @bind-Value="@_fontSizePercent" Min="10" Max="50"/>
+    </MudItem>
+    <MudItem xs="6">
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient1"/>
+    </MudItem>
+    <MudItem xs="6">
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient2"/>
+    </MudItem>
+    <MudItem xs="6">
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient3"/>
+    </MudItem>
+    <MudItem xs="6">
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" @bind-Value="_gradient4"/>
+    </MudItem>
+</MudGrid>
+
+@code
+{
+    private string _iconText = "🚀";
+    private double _fontSizePercent = 50.0;
+
+    private MudColor _gradient1 = "#594AE2";
+    private MudColor _gradient2 = "#FF4081";
+    private MudColor _gradient3 = "#FF4081";
+    private MudColor _gradient4 = "#FF4081";
+}

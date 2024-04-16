@@ -10,13 +10,12 @@
     </MudMainContent>
 </MudLayout>
 
-<div>
-    <MudToggleIconButton @bind-Toggled="@_isDarkMode"
-                         Icon="@Icons.Material.Filled.DarkMode" Color="@Color.Default"
-                         ToggledIcon="@Icons.Material.Filled.WbSunny" ToggledColor="@Color.Default"
-                         Class="dark-mode-btn">
-    </MudToggleIconButton>
-</div>
+
+<MudToggleIconButton @bind-Toggled="@_isDarkMode"
+                     Icon="@Icons.Material.Filled.DarkMode" Color="@Color.Default"
+                     ToggledIcon="@Icons.Material.Filled.WbSunny" ToggledColor="@Color.Default"
+                     Class="absolute" Style="bottom: 1%; left: 1%; box-shadow: var(--mud-palette-black) 0 2px 10px;">
+</MudToggleIconButton>
 
 
 <div id="blazor-error-ui">

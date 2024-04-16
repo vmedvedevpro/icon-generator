@@ -1,33 +1,34 @@
 ﻿@page "/"
 @using MudBlazor.Utilities
 
-<MudItem Class="icon justify-center align-content-center" Style="">
-    <MudText Class="align-content-center"
-             Style="@($"height:40vh; width: 40vh; border-radius: 50%; margin: auto; color:white; overflow:hidden; font-size: {(40 * _fontSizePercent * 0.01):F0}vh;" +
-                      $"background: radial-gradient(circle at top left, {_gradient1.ToString(MudColorOutputFormats.RGBA)}, transparent)," +
-                                    $"radial-gradient(circle at top right, {_gradient2.ToString(MudColorOutputFormats.RGBA)}, transparent)," +
-                                    $"radial-gradient(circle at bottom left, {_gradient3.ToString(MudColorOutputFormats.RGBA)}, transparent)," +
-                                    $"radial-gradient(circle at bottom right, {_gradient4.ToString(MudColorOutputFormats.RGBA)}, transparent)")"
-             Align="Align.Center">@_iconText</MudText>
+<MudItem Style="justify-content: center; align-content: center">
+    <MudItem Style="@($"display:grid;align-content:center; height:40vh; width: 40vh; border-radius: 50%; margin: auto; color:white; overflow:hidden;"
+                      + $"background: radial-gradient(circle at top left, {_gradient1.ToString(MudColorOutputFormats.RGBA)}, transparent),"
+                      + $"radial-gradient(circle at top right, {_gradient2.ToString(MudColorOutputFormats.RGBA)}, transparent),"
+                      + $"radial-gradient(circle at bottom left, {_gradient3.ToString(MudColorOutputFormats.RGBA)}, transparent),"
+                      + $"radial-gradient(circle at bottom right, {_gradient4.ToString(MudColorOutputFormats.RGBA)}, transparent)")">
+        <MudText Align="Align.Center" Style="@($"font-size: {(40 * _fontSizePercent * 0.01):F0}vh;")">@_iconText
+        </MudText>
+    </MudItem>
 </MudItem>
 <MudGrid Justify="Justify.Center" Style="padding: 5%">
     <MudItem xs="6">
         <MudTextField @bind-Value="_iconText" Label="Your text logo" Variant="Variant.Outlined" FullWidth="true"/>
     </MudItem>
-    <MudItem xs="6" Class="align-content-center">
-        <MudSlider @bind-Value="@_fontSizePercent" Min="10" Max="50" Size="Size.Medium" />
+    <MudItem xs="6" Style="display:grid; align-content: center">
+        <MudSlider @bind-Value="@_fontSizePercent" Min="10" Max="50" Size="Size.Large"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true" PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient1"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableToolbar="false" DisableModeSwitch="true" PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient1"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true"  PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient2"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableToolbar="false" DisableModeSwitch="true" PickerVariant="PickerVariant.Dialog" Elevation="9" @bind-Value="_gradient2"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true"  PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient3"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableToolbar="false" DisableModeSwitch="true" PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient3"/>
     </MudItem>
     <MudItem xs="6">
-        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableModeSwitch="true"  PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient4"/>
+        <MudColorPicker ColorPickerView="ColorPickerView.Spectrum" DisableToolbar="false" DisableModeSwitch="true" PickerVariant="PickerVariant.Dialog" @bind-Value="_gradient4"/>
     </MudItem>
 </MudGrid>
 

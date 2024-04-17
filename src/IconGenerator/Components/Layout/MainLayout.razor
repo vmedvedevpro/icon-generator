@@ -1,15 +1,31 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <main>
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme"/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+<MudLayout>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+
+<MudToggleIconButton @bind-Toggled="@_isDarkMode"
+                     Icon="@Icons.Material.Filled.DarkMode" Color="@Color.Default"
+                     ToggledIcon="@Icons.Material.Filled.WbSunny" ToggledColor="@Color.Default"
+                     Class="absolute" Style="bottom: 1%; left: 1%; box-shadow: var(--mud-palette-black) 0 2px 10px;">
+</MudToggleIconButton>
+
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code
+{
+    private readonly MudTheme _theme = new();
+    private bool _isDarkMode;
+}

@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluton Items", "Soluton It
 		.gitignore = .gitignore
 		.editorconfig = .editorconfig
 		docker-compose.yml = docker-compose.yml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BB101600-6CA5-4501-9DBA-0387BDFE98EC}"
